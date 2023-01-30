@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Form</title>
+</head>
+<body>
+    
+    <form action="POST" method="get" id="form">
+
+
+        <label for="nom">Nom<span class="red">*</span></label>
+        <input type="text" name="nom" id="nom" placeholder="Ortega" required>
+
+
+        <label for="prenom">Prénom<span class="red">*</span></label>
+        <input type="text" name="prenom" id="prenom" placeholder="Jenna" required>
+
+        <label for="email">E-Mail<span class="red">*</span></label>
+        <input type="email" name="email" id="email" placeholder="jenna@ortega.com" required>
+        
+        
+        <label for="mdp">MDP<span class="red">*</span></label>
+        <input type="password" name="mdp" id="mdp" placeholder="Password" required>
+    
+        
+        <label for="confmdp">Confimation MDP</label>
+        <input type="password" name="confmdp" id="confmdp" placeholder="Password" required>
+
+
+        <label for="date">Naissance<span class="red">*</span></label>
+        <input type="date" name="date" id="date" required>
+
+    <div>
+        <label for="cgu">Accepter les <a href="">Conditions Générales d'Utilisation</a><span class="red">*</span></label>
+        <input type="checkbox" name="cgu" id="cgu" required>
+    </div>
+
+    <input type="submit" value="Envoyer" class="btn-submit">
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
