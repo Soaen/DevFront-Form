@@ -1,5 +1,7 @@
 const form = document.querySelector('#form');
 const inputs = form.querySelectorAll('input');
+const passwordInput = form.querySelector('#password');
+const confirmPasswordInput = form.querySelector('#confirm-password');
 
 inputs.forEach(input => {
   input.addEventListener('blur', validateInput);
@@ -27,5 +29,21 @@ function validateForm(event) {
   });
   if (formValid) {
     form.submit();
+  }
+}
+
+
+confirmPasswordInput.addEventListener('input', validatePassword);
+
+form.addEventListener('submit', validateForm);
+
+function validatePassword(event) {
+  const password = passwordInput.value;
+  const confirmPassword = event.target.value;
+
+  if (password !== confirmPassword) {
+    confirmPasswordInput.setCustomValidity('Les mots de passe ne correspondent pas');
+  } else {
+    confirmPasswordInput.setCustomValidity('');
   }
 }
